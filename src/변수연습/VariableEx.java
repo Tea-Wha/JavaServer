@@ -30,5 +30,31 @@ public class VariableEx {
         int m = 40;
         System.out.println(n+m);
         // 지역 변수는 Block 안에서만 유지
+
+        byte num1 = 127;
+        byte num2 = -128;
+
+        num1++;
+        num2--;
+        System.out.println(num1); // 127 + 1 -> 128 -> -128 (Overflow)
+        System.out.println(num2); // -128 -1 -> -129 -> 127 (Overflow)
+
+        char ch1 = 'A';
+        System.out.println(ch1);
+        System.out.println((int)ch1);
+
+        char ch2 = 66;
+        System.out.println(ch2);
+        System.out.printf("%c\n",ch2);
+
+        float pie = 3.141592f;
+        double pie1 = 3.141592;
+
+        double num10 = 0.0;
+        for(int i = 0; i<1000; i++){
+            num10 += 0.1;
+        }
+        System.out.println(num10);
+        // 근사치 계산법 때문에 100이 정확하게 안찍힌다.
     }
 }
