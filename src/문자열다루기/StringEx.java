@@ -42,6 +42,38 @@ public class StringEx {
         System.out.println(e.substring(6)); // 6에서부터 끝까지
         System.out.println(e.substring(6,8)); // 6 이상 8 미만
 
+        // toUpperCase/ toLowerCase
+        System.out.println(e.toUpperCase());
+        System.out.println(e.toLowerCase());
+        
+        // trim() : 문자열의 앞/뒤의 공백 제거
+        String f = "  안녕하세요.   오늘은 날씨가 좋아요.   ";
+        System.out.println(f);
+        System.out.println(f.trim());
+
+        // split() : 문자열을 특정 문자열 기준으로 분리하는 메소드
+        String g = "23:45:56";
+        String[] timeStr = g.split(":");
+        for (String el : timeStr){
+            System.out.print(el + " ");
+        }
+        System.out.println(timeStr[0]+"시"+timeStr[1]+"분"+timeStr[2]+"초");
+        System.out.println();
+        
+        // 문자열 포매팅 : 서식을 지정해서 문자열 만드는 것
+        // System.out.printf(), String.format()
+        System.out.printf("오늘의 온도는 %d입니다.\n", 35);
+        String otherStr = String.format("오늘의 온도는 %d입니다.\n", 35);
+        System.out.println(otherStr);
+        
+        // toCharArray() : 문자열을 문자 배열로 반환
+        String strVal = "SDAScxzcz-sdnosdk"; // 문자 배열
+        char[] chArray = strVal.toCharArray();
+        System.out.println(chArray);
+        for(char ec : chArray){
+            System.out.print(ec + " ");
+        }
+        System.out.println();
         // 실습문제 : 대문자, 소문자로 이루어진 문자열을 입력 받아
         // 대문자는 소문자로, 소문자는 대문자로 반환
         char word = 'A';
