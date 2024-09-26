@@ -23,7 +23,7 @@ public class Member { // 불러오는 클래스
         System.out.print("이름 입력 : ");
         name = scanner.nextLine(); // 같은 클래스 내에 name이 있어서 가능
     }
-    public void setAge() { // 내부 메소드는 반환값이 없는 경우가 많다
+    public void setAge() { // 내부 메소드는 반환값이 없는 경우가 많다 // 이것이 메소드
         while (true){ // void는 반환값을 요구하지는 않지만 반환은 가능하다.
             System.out.print("나이 입력 : ");
             age = scanner.nextInt(); // 인스턴스 필드에 반환해놨기 때문에 return 값이 따로 필요하지 않다.
