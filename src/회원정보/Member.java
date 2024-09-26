@@ -63,7 +63,7 @@ public class Member { // 불러오는 클래스
         }
     }
 
-    public void getInfo() {
+    public void getInfo() { // 뒤쪽에 한번에 출력
         String[] genderStr = {"", "남성", "여성"}; // 입력된 값과 배열의 인덱스를 일치하게 하기 위해서
         // return 값을 0,1 로 했으면 맨 앞의 공백 칸은 필요 없다?
         String[] jobStr = {"", "학생", "회사원", "주부", "무직"};

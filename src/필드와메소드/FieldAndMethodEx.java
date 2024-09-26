@@ -9,11 +9,24 @@ public class FieldAndMethodEx {
 //        int sum = test.sum(100,200);
 //        System.out.println(sum);
         int sum = FieldAndMethodEx.sum(100,200); // 같은 클래스 내에서는 클래스 이름 생략 가능
-        System.out.println(sum);
-        System.out.println(sum(200,300));
-        System.out.println(sum("Test","JAVA"));
-        System.out.println(sum("Test",300));
-        System.out.println(sum(1,2,3,4,5,6,7,8,9));
+//        System.out.println(sum);
+//        System.out.println(sum(200,300));
+//        System.out.println(sum("Test","JAVA"));
+//        System.out.println(sum("Test",300));
+//        System.out.println(sum(1,2,3,4,5,6,7,8,9));
+        String factory = "현대자동차 울산 공장";
+        Car gv70 = new Car("GV70", 220, 280, "Black");
+        Car ionic5N = new Car("아이오닉5N", 250, 600, "White");
+        Car x6 = new Car("X6",230,350,"Gray");
+        Car santafe = new Car(); // 생성자 오버로딩
+        Car sorento = new Car("쏘렌토");
+        gv70.getCarInfo();
+        ionic5N.getCarInfo();
+        x6.getCarInfo();
+        santafe.getCarInfo();
+        sorento.getCarInfo();
+        System.out.println(Car.productNumber);
+        System.out.println(Car.company);
     }
 //    // 인스턴스 메소드
 //    int sum(int a, int b){
@@ -40,19 +53,40 @@ public class FieldAndMethodEx {
 }
 
 class Car { // 클래스 외부에서 클래스 생성 가능
-    static int productNumber = 0; // 클래스 필드
+    static int productNumber = 0; // 클래스 필드, 프로그램 생성 시, 즉 클래스가 만들어질 메모리 생성
     static String company = "현대자동차"; // 클래스 필드
-    String modelName; // 인스턴스 필드
+    String modelName; // 인스턴스 필드, 객체가 생성될 때 만들어짐
     int speed; // 인스턴스 필드
     int horsePower; // 인스턴스 필드
     String color; // 인스턴스 필드
-    // 매개변수가 있는 생성자
+    // 매개변수가 있는 생성자, 클래스를 객체로 만들 때 호출
+    Car(String name){
+        modelName = name;
+        speed = 200;
+        horsePower = 200;
+        color = "blue";
+        productNumber +=1 ;
+    }
+    Car(){
+        modelName = "싼타페";
+        speed = 200;
+        horsePower = 200;
+        color = "red";
+        productNumber +=1 ;
+    }
     Car(String name, int speed, int power, String color){
         modelName = name;
-        this.speed = speed; // this. -> self
+        this.speed = speed; // this. -> self (자기 자신 객체를 참조하는 변수)
         horsePower = power;
         this.color = color;
         productNumber +=1 ; // 클래스 필드
+    } // default 값 -> 같은 패키지에서 사용 가능 (제한연산자)
+    void getCarInfo(){ 
+        System.out.println("이름 : "+ modelName); // this. 가 숨어있음
+        System.out.println("속도 : "+ speed);
+        System.out.println("마력 : "+ horsePower);
+        System.out.println("색상 : "+ color);
+        System.out.println("---------------------");
     }
 }
 
