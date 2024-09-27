@@ -1,6 +1,7 @@
 package 아이패드주문하기예제;
 
 import 아이패드주문하기예제.IPadPro;
+import 아이패드주문하기예제.Common;
 
 public class IPadMain {
     public static void main(String[] args) throws InterruptedException {

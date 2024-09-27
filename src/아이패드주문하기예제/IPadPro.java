@@ -3,6 +3,7 @@ package 아이패드주문하기예제;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+import static 아이패드주문하기예제.Common.*;
 
 import static java.lang.Thread.sleep;
 
@@ -114,11 +115,10 @@ public class IPadPro {
         System.out.println("각인 : "+name);
         System.out.println("시리얼 넘버 : "+serialNumber);
         System.out.println("====================================");
-
     }
     // 선택한 옵션을 포함한 제품 가격 구하기
-    public void iPadProCalcPrice(){
-        System.out.println("총 결제 가격은 :" +(price)+"원 입니다.");
+    public void iPadProCalcPrice() {
+        System.out.println("총 결제 가격은 :" + (price) + "원 입니다.");
     }
     
 }
