@@ -9,11 +9,13 @@ public class MovieTicket {
     int price;
     Scanner scanner = new Scanner(System.in);
     // 생성자는 좌석당 가격 정보를 객체 생성 시 넣어야 되므로 매개변수가 있는 생성자 필요
-    public String setPrice() {
+    public void setPrice() {
         while (true) {
             System.out.print("좌석당 영화 티켓 가격을 설정 : ");
             int price = scanner.nextInt();
-            if (price >= 0 && price <= 20000) return "좌석당 영화 티켓 가격은 "+price+ "원 으로 설정되었습니다.";
+            if (price >= 0 && price <= 20000) {
+                System.out.println("좌석당 영화 티켓 가격을 "+price+"원으로 설정되었습니다.");
+            return;}
             else System.out.println("티켓 가격을 잘못 입력했습니다.");
         }
     }
