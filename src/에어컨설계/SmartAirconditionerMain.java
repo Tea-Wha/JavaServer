@@ -23,9 +23,9 @@ public class SmartAirconditionerMain {
                 sleep(1000); // 1초
                 elapsedTime++; // 1초마다 경과 시간 값이 1씩 증가
                 switch (lgAircon.getWindStep()){
-                    case 1: if(elapsedTime >= 20) isSetTemp = true; break;
-                    case 2: if(elapsedTime >= 10) isSetTemp = true; break;
-                    case 3: if(elapsedTime >= 5) isSetTemp = true; break;
+                    case 1: if(elapsedTime >= 6) isSetTemp = true; break;
+                    case 2: if(elapsedTime >= 4) isSetTemp = true; break;
+                    case 3: if(elapsedTime >= 2) isSetTemp = true; break;
                 }
                 if(isSetTemp){
                     if (lgAircon.isHeater()) lgAircon.setNowTemp(1); //

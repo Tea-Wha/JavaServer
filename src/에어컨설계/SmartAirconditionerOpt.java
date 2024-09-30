@@ -63,18 +63,11 @@ public class SmartAirconditionerOpt extends AirconditionerOpt {
             windStep = 3;
         } else if ((nowTemp >= targetTemp + 5 && nowTemp < targetTemp + 10) || ((nowTemp <= targetTemp - 5 && nowTemp > targetTemp - 10))) {
             windStep = 2;
-        } else if (nowTemp < targetTemp + 5 || nowTemp > targetTemp - 5) windStep = 1;
+        } else if (nowTemp < targetTemp + 5 || nowTemp > targetTemp - 5) {
+            windStep = 1;
+        }
     }
 
-    @Override
-    public int getWindStep() {
-        return windStep;
-    }
-
-    @Override
-    public void setWindStep(int windStep) {
-        this.windStep = windStep;
-    }
 
     public void airConInfo() {
         String onOffStr = (isPower) ? "ON" : "OFF";
