@@ -58,6 +58,7 @@ public class SmartAirconditionerOpt extends AirconditionerOpt {
     public void setNowTemp(int nowTemp) {
         this.nowTemp += nowTemp;
     }
+
     public void windStep() {
         if (nowTemp >= targetTemp + 10 || nowTemp <= targetTemp - 10) {
             windStep = 3;
@@ -68,6 +69,15 @@ public class SmartAirconditionerOpt extends AirconditionerOpt {
         }
     }
 
+    @Override
+    public int getWindStep() {
+        return windStep;
+    }
+
+    @Override
+    public void setWindStep(int windStep) {
+        this.windStep = windStep;
+    }
 
     public void airConInfo() {
         String onOffStr = (isPower) ? "ON" : "OFF";
@@ -91,9 +101,9 @@ public class SmartAirconditionerOpt extends AirconditionerOpt {
         if (windStep == 3){
             System.out.println("터보 모드 작동중입니다.");
         } else if (windStep == 2){
-            System.out.println("자동으로 풍량을 조절중입니다.");
+            System.out.println("풍량 2단계로 조절중입니다.");
         } else if (windStep == 1) {
-            System.out.println("자동으로 풍량을 조절중입니다.");
+            System.out.println("풍량 1단계로 조절중입니다.");
         }
 
 

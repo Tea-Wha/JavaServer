@@ -30,6 +30,7 @@ public class SmartAirconditionerMain {
                 if(isSetTemp){
                     if (lgAircon.isHeater()) lgAircon.setNowTemp(1); //
                     if (lgAircon.isCooler()) lgAircon.setNowTemp(-1); //
+                    lgAircon.windStep();
                     lgAircon.airConInfo();
                     isSetTemp = false;
                     elapsedTime = 0;
