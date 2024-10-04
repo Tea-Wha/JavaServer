@@ -1,4 +1,6 @@
 package 자동차만들기;
+// 공통된 부분은 부모 클래스가 자식 클래스로 넘겨주는게 이득이기 때문에 추상화 클래스 사용이 좋다 (인터페이스보다)
+
 
 public interface CarInterface {
     void name (String name);
