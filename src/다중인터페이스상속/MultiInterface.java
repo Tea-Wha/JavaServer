@@ -5,6 +5,6 @@ public class MultiInterface {
     public static void main(String[] args) {
         SportsCar porshe = new SportsCar(false, 18, false, false);
         porshe.viewInfo();
-        
+
     }
 }
