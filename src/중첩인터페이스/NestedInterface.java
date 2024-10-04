@@ -9,6 +9,7 @@ public class NestedInterface {
         // 버튼에 OnClickListener 인터페이스 대입 (setOnClickListener)
         // listener 부분에 CallListener로 새로 지정/만듬
         button.touch(); // 실행
+        // touch 가 CallListener로 넘어감 / listener.onClick -> CallListener.onClick
 
         Button button1 = new Button();
         button1.setOnClickListener(new MessageListener());
