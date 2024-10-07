@@ -2,15 +2,18 @@ package Arrays클래스;
 // 배열과 관련된 다양한 메소드를 제공하는 클래스
 
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class ArraysClass {
     public static void main(String[] args) {
         sortAndSearchFunc();
+        sortComparatorFunc();
+        Integer[] array = {5,4,7,9,13,3,3,1,88,23,23};
+        List<Integer> list = Arrays.asList(array);
+        System.out.println(list);
     }
+
+
     // 정렬과 검색
     static void sortAndSearchFunc(){
         Integer[] array = {5,4,7,8,12,34,34,2,57,3,3};
@@ -32,11 +35,14 @@ public class ArraysClass {
     // Comperator 클래스의 compare 메소드를 오버라이딩 해서 정렬 조건을 만듬
     static void sortComparatorFunc(){
         Integer[] array = {5,4,7,8,12,34,34,2,57,3,3};
-        Arrays.sort(array, new Comparator<Integer>() {
+        Arrays.sort(array, new Comparator<Integer>() {  // <T> Generic Type
             @Override
             public int compare(Integer o1, Integer o2) {
-                return 0;
+                if (o1 < o2) return 1; // 정렬 조건
+                return -1;
             }
         });
+        for (int e:array) System.out.print(e+ " ");
+        System.out.println();
     }
 }
