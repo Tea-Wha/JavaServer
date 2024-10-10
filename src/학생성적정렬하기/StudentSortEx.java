@@ -3,8 +3,7 @@ package 학생성적정렬하기;
 // 첫번째 조건은 총점 기준
 // 총점이 같으면 이름의 사전 순 정렬
 
-import java.util.Scanner;
-import java.util.TreeSet;
+import java.util.*;
 
 public class StudentSortEx {
     public static void main(String[] args) {
@@ -24,6 +23,7 @@ public class StudentSortEx {
             treeset.add(new ScoreComparable(name, kGr, eGr, mGr));
             stNum--;
         }
+            // Collections.sort(treeset);
             for (ScoreComparable e : treeset){
                 System.out.print("학생 : "+e.getName()+" 총점 : "+e.getTotal()+" ");
             }

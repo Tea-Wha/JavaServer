@@ -7,7 +7,7 @@ public class ScoreComparable implements Comparable<ScoreComparable>{
     private int mGr;
     private int total;
 
-    @Override
+    @Override // TreeSet은 정렬 조건을 확인하고 정렬을 진행함
     public int compareTo(ScoreComparable o) { // 인터페이스에 오버라이딩(내재) 되어있는 compareTo 정렬 방식 바꾸기
         total = kGr + eGr + mGr; // total 구하기
         if (this.total == o.total){
