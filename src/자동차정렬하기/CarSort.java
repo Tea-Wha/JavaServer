@@ -9,7 +9,7 @@ public class CarSort {
         Scanner scanner = new Scanner(System.in);
         List<CarComparator> car = new ArrayList<>();
         for (int i=0; i<10; i++){
-
+            System.out.println();
         }
     }
 }
