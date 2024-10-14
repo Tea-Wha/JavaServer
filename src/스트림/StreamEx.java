@@ -7,6 +7,11 @@ package 스트림;
 // 필터와 맵 기반의 API를 사용해서 지연 연산을 통해서 성능 최적화
 // 병렬처리 지원
 
+// 스트림 API 의 동작 흐름
+// 1. 스트림 생성 -> Collection 인터페이스의 stream() 메소드 -> Collection.stream()
+// 2. 중간 연산 -> filter, map, sorted 등
+// 3. 종단 연산 -> forEach, collect, reduce 등 -> 호출되는 순간 중간 연산이 처리되고, 결과 반환
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
